@@ -78,7 +78,7 @@ REQUIRED_PACKAGES = [
     # NOTE: As numpy has releases that break semver guarantees and several other
     # deps depend on numpy without an upper bound, we must install numpy before
     # everything else.
-    'numpy ~= 1.19.2',
+    'numpy >= 1.19.2,< 1.27.0',
     # Install other dependencies
     'absl-py ~= 0.10',
     'astunparse ~= 1.6.3',
@@ -136,7 +136,7 @@ if sys.byteorder == 'little':
 # Follows the same conventions as `REQUIRED_PACKAGES`
 TEST_PACKAGES = [
     'portpicker ~= 1.3.1',
-    'scipy ~= 1.5.2',
+    'scipy >= 1.5.2,< 1.13.0',
     'tblib ~= 1.7.0',
     'dill ~= 0.3.2',
 ]
